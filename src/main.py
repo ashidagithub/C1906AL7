@@ -78,7 +78,7 @@ player2Cards = []
 player3Cards = []
 player4Cards = []
 Dealer.Mike.deal_to_multi_players(
-    deck, player1Cards, player2Cards, player3Cards,player4Cards)
+    deck, player1Cards, player2Cards, player3Cards, player4Cards)
 
 Machine.StandardMachine.record_deck(player1Cards, 'P1.txt')
 Machine.StandardMachine.record_deck(player2Cards, 'P2.txt')
