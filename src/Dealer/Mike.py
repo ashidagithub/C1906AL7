@@ -30,7 +30,7 @@ def deal_to_multi_players(aDeck, *playersCards):
     playerNum = len(playersCards)
     cardsNum = len(aDeck)
     playerHoldCards = int(cardsNum / playerNum)
-    print('\n===debug1: %d' % (playerHoldCards))
+    #print('\n===debug1: %d' % (playerHoldCards))
 
     for pscs in playersCards:
         # fbb ----
