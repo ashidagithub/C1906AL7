@@ -8,7 +8,7 @@
 # 本模块为主模块，主程序，引用其他的模块
 # ------------------------(max to 80 columns)-----------------------------------
 
-from MyModules import *
+from my_mods import *
 
 # 输出一条分割线，然后打印一个 Hello World
 pnt_cutline(1)
