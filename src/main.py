@@ -8,9 +8,9 @@
 # 完成一个荷官洗牌发牌给n个玩家的模拟程序
 # ------------------------(max to 80 columns)-----------------------------------
 
-from myModule import *
-from Machine.StandardMachine import *
-from Dealer.Mike import *
+from my_mods import *
+from machine.standard_machine import *
+from dealer.Mike import *
 
 # Phase 1 -------------------------------------------------------
 # 从机器取一副新牌并写入一个文件
