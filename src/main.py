@@ -16,7 +16,7 @@ from dealer.Mike import *
 # 从机器取一副新牌并写入一个文件
 deck = []
 create_deck(deck)
-fname = 'poker01.txt'
+fname = 'deck01.txt'
 record_deck(deck, fname)
 
 # 完成动作后显示信息
@@ -31,7 +31,7 @@ pnt_box(msg)
 deck = []
 create_deck(deck)
 shuffle_deck(deck)
-fname = 'poker02.txt'
+fname = 'deck02.txt'
 record_deck(deck, fname)
 
 # 完成动作后显示信息
@@ -44,16 +44,16 @@ pnt_box(msg)
 # Phase 3 -------------------------------------------------------
 # 给某个玩家发几张牌
 card_num = 5
-player1Cards = []
-deal_to_a_player(deck, card_num, player1Cards)
+p1_deck = []
+deal_to_a_player(deck, card_num, p1_deck)
 fname = 'Player1-Cards.txt'
-record_deck(player1Cards, fname)
+record_deck(p1_deck, fname)
 fname = 'Remained-Deck.txt'
 record_deck(deck, fname)
 
 pnt_cut_line(3)
 msg = 'Mike dealed %d cards to first player, detail is :\n%s' % (
-    card_num, player1Cards)
+    card_num, p1_deck)
 pnt_box(msg)
 msg = 'Remained %d cards, detail is :\n%s' % (len(deck), deck)
 pnt_box(msg)
@@ -72,17 +72,17 @@ msg = '--debug: %d players, every one has %d cards.' % (
     numOfPlayers, cardsOfPlayer)
 pnt_box(msg)
 
-player1Cards = []
-deal_to_a_player(deck, cardsOfPlayer, player1Cards)
-record_deck(player1Cards, 'Player1Cards.txt')
+p1_deck = []
+deal_to_a_player(deck, cardsOfPlayer, p1_deck)
+record_deck(p1_deck, 'p1_deck.txt')
 
-player2Cards = []
-deal_to_a_player(deck, cardsOfPlayer, player2Cards)
-record_deck(player2Cards, 'Player2Cards.txt')
+p2_deck = []
+deal_to_a_player(deck, cardsOfPlayer, p2_deck)
+record_deck(p2_deck, 'p2_deck.txt')
 
-player3Cards = []
-deal_to_a_player(deck, cardsOfPlayer, player3Cards)
-record_deck(player3Cards, 'Player3Cards.txt')
+p3_deck = []
+deal_to_a_player(deck, cardsOfPlayer, p3_deck)
+record_deck(p3_deck, 'p3_deck.txt')
 
 # Phase 4 -------------------------------------------------------
 # 给多个玩家发牌
@@ -91,16 +91,16 @@ deck = []
 create_deck(deck)
 shuffle_deck(deck)
 
-player1Cards = []
-player2Cards = []
-player3Cards = []
-player4Cards = []
-player5Cards = []
+p1_deck = []
+p2_deck = []
+p3_deck = []
+p4_deck = []
+p5_deck = []
 deal_to_multi_players(
-    deck, player1Cards, player2Cards, player3Cards, player4Cards, player5Cards)
+    deck, p1_deck, p2_deck, p3_deck, p4_deck, p5_deck)
 
-record_deck(player1Cards, 'P1.txt')
-record_deck(player2Cards, 'P2.txt')
-record_deck(player3Cards, 'P3.txt')
-record_deck(player4Cards, 'P4.txt')
-record_deck(player5Cards, 'P5.txt')
+record_deck(p1_deck, 'P1.txt')
+record_deck(p2_deck, 'P2.txt')
+record_deck(p3_deck, 'P3.txt')
+record_deck(p4_deck, 'P4.txt')
+record_deck(p5_deck, 'P5.txt')

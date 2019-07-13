@@ -12,40 +12,41 @@
 import random
 
 
-def deal_to_a_player(aDeck, num, playerCards):
+def deal_to_a_player(aDeck, num, player_cards):
     'Desc: Deal some cards to a player from a deck'
-    #playerCards = []
+    #player_cards = []
     for i in range(num):
-        pickedCard = random.choice(aDeck)
-        playerCards.append(pickedCard)
-        aDeck.remove(pickedCard)
-    # print('\# NOTE: ==debug1: %s' % (playerCards))
-    playerCards.sort()
-    #print('==debug2: %s' % (playerCards))
+        picked_card = random.choice(aDeck)
+        player_cards.append(picked_card)
+        aDeck.remove(picked_card)
+    # print('\# NOTE: ==debug1: %s' % (player_cards))
+    player_cards.sort()
+    #print('==debug2: %s' % (player_cards))
     return
 
 
-def deal_to_multi_players(aDeck, *playersCards):
+def deal_to_multi_players(aDeck, *players_cards):
     'Desc: Deal to multiple players, deal remained cards into first player'
-    playerNum = len(playersCards)
+    playerNum = len(players_cards)
     cardsNum = len(aDeck)
     playerHoldCards = int(cardsNum / playerNum)
     #print('\n===debug1: %d' % (playerHoldCards))
 
-    for pscs in playersCards:
+    for pscs in players_cards:
         # fbb ----
         for i in range(playerHoldCards):
             # fbb ----
-            pickedCard = random.choice(aDeck)
-            pscs.append(pickedCard)
-            aDeck.remove(pickedCard)
+            picked_card = random.choice(aDeck)
+            pscs.append(picked_card)
+            aDeck.remove(picked_card)
             # fbe ----
         # fbe ----
         pscs.sort()
 
     if len(aDeck) > 0:
         for card in aDeck:
-            playersCards[0].append(card)
+            players_cards[0].append(card)
         aDeck = []
+        players_cards[0].sort()
 
     return
