@@ -33,6 +33,8 @@ def deal_to_multi_players(a_deck, *players_cards):
     #print('\n===debug1: %d' % (deal_num))
 
     for pscs in players_cards:
+        deal_to_a_player(a_deck,deal_num,pscs)
+        '''
         # fbb ----
         for i in range(deal_num):
             # fbb ----
@@ -42,6 +44,7 @@ def deal_to_multi_players(a_deck, *players_cards):
             # fbe ----
         # fbe ----
         pscs.sort()
+        '''
 
     if len(a_deck) > 0:
         for card in a_deck:
