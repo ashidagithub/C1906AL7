@@ -24,17 +24,17 @@ cardNumbers = ('2', '3', '4', '5', '6', '7', '8',
                '9', '10', 'J', 'Q', 'K', 'A')
 
 
-def create_deck(outCards):
+def create_deck(new_deck):
     'Desc: Make a new standard 54 cards poker, put them in order'
     for c in cardJokers:
-        outCards.append(c)
+        new_deck.append(c)
 
     # add 4x13 cards
     for cn in cardNumbers:
         for cm in cardMarks:
             #card = cm + cn
             card = cn + cm
-            outCards.append(card)
+            new_deck.append(card)
     return
 
 
